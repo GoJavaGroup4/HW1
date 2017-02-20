@@ -36,7 +36,8 @@ CREATE TABLE IF NOT EXISTS skills(
 )
 ENGINE InnoDB;
 
-CREATE TABLE IF NOT EXISTS Dev_Skills(
+/*CREATE TABLE IF NOT EXISTS Dev_Skills(*/
+CREATE TABLE IF NOT EXISTS dev_skills(
   developer_id INT NOT NULL,
   skills_id    INT NOT NULL,
 
@@ -73,5 +74,28 @@ CREATE TABLE IF NOT EXISTS project_company(
 )
 ENGINE InnoDB;
 
-ALTER TABLE developers ADD salary INT,
+/*Error Code: 1060. Duplicate column name 'salary'*/
+/*ALTER TABLE developers ADD salary INT,
+ENGINE InnoDB;*/
+
+CREATE TABLE IF NOT EXISTS customers (
+  id INT AUTO_INCREMENT NOT NULL  PRIMARY KEY ,
+  name      VARCHAR(100) NOT NULL ,
+  inn INT,
+  edrpou INT,
+
+  INDEX name (name),
+  INDEX inn (inn),
+  INDEX edrpou (edrpou)
+)
+ENGINE InnoDB;
+
+CREATE TABLE IF NOT EXISTS projects_customers (
+  project_id    INT NOT NULL,
+  customers_id INT NOT NULL,
+  
+  FOREIGN KEY (customers_id) REFERENCES customers(id),
+  FOREIGN KEY (project_id)  REFERENCES projects(id),
+  UNIQUE (customers_id, project_id)
+)
 ENGINE InnoDB;
