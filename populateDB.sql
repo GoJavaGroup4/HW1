@@ -77,14 +77,14 @@ INSERT INTO companies(name, address, country, city) VALUES ('Goggle', 'adr2', 'U
 INSERT INTO companies(name, address, country, city) VALUES ('Ciklum', 'adr3', 'Ukraine', 'Kiev');
 INSERT INTO companies(name, address, country, city) VALUES ('GlobalLogic', 'adr4', 'Ukraine', 'Kiev');
 
-INSERT INTO projects(name) VALUES ('ProjectX');
-INSERT INTO projects(name) VALUES ('Google Pixel');
-INSERT INTO projects(name) VALUES ('Google Soli');
-INSERT INTO projects(name) VALUES ('PayCash');
-INSERT INTO projects(name) VALUES ('BIScience');
-INSERT INTO projects(name) VALUES ('PayCash2');
-INSERT INTO projects(name) VALUES ('BIScience3');
-INSERT INTO projects(name) VALUES ('TechFinancials');
+INSERT INTO projects(name, description) VALUES ('ProjectX', 'project1');
+INSERT INTO projects(name, description) VALUES ('Google Pixel', 'project2');
+INSERT INTO projects(name, description) VALUES ('Google Soli', 'project3');
+INSERT INTO projects(name, description) VALUES ('PayCash', 'project4');
+INSERT INTO projects(name, description) VALUES ('BIScience', 'project5');
+INSERT INTO projects(name, description) VALUES ('PayCash2', 'project6');
+INSERT INTO projects(name, description) VALUES ('BIScience3', 'project7');
+INSERT INTO projects(name, description) VALUES ('TechFinancials', 'project8');
 
 INSERT INTO customers(name) VALUES ('PayCash');
 INSERT INTO customers(name) VALUES ('BIScience');
