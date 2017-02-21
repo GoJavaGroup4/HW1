@@ -16,7 +16,6 @@ CREATE TABLE IF NOT EXISTS developers (
   country    VARCHAR(100) NOT NULL,
   city       VARCHAR(100) NOT NULL,
   join_date  DATE,
-  dev_skills INT,
 
   INDEX (name)
 )
